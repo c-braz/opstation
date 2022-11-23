@@ -9,12 +9,10 @@ mkdir $HOME/$opname/tools
 cp -R bin/ ~/$opname/.
 cp etc/terminalrc $HOME/.config/xfce4/terminal/.
 
-chown -R kali:kali ~/$opname
-
-echo "export PATH=$PATH:$HOME/$opname/bin" >> /etc/zsh/zshenv
+echo "export PATH=$PATH:$HOME/$opname/bin" >> $HOME/.zshrc
 
 echo "Following directories were created..."
 find $HOME/$opname
 
 $HOME/$opname/bin/monitor-traffic.sh
-xfce4-terminal --geometry=80x40-0+35 --working-directory=~/remove/logs -x /bin/zsh -c "vim notes.txt ; /bin/zsh" &
+xfce4-terminal --geometry=80x40-0+35 -x /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
