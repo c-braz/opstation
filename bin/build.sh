@@ -11,7 +11,7 @@ cp etc/terminalrc $HOME/.config/xfce4/terminal/.
 
 chown -R kali:kali ~/$opname
 
-echo "export PATH=$PATH:$HOME/$opname/bin" >> /etc/zsh/zshrc
+echo "export PATH=$PATH:$HOME/$opname/bin" >> /etc/zsh/zshenv
 
 echo "Following directories were created..."
 find $HOME/$opname
