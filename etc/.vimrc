@@ -10,7 +10,7 @@ syntax on
 "Set folds to auto Open
 autocmd BufWinEnter * silent! :%foldopen!
 "Set CWD for Vim to Pastables to make :r easier
-autocmd BufEnter * lcd ~/CTFNotes/pastables/
+autocmd BufEnter * lcd $HOME/$opname/pastables/
 "Function Key mappings
 
 map <F1> i
