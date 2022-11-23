@@ -7,9 +7,9 @@ mkdir ~/$opname/logs
 mkdir ~/$opname/tools
 
 cp -R bin/ ~/$opname/.
-cp etc/ terminalrc ~/.config/xfce4/terminal/.
+cp etc/terminalrc ~/.config/xfce4/terminal/.
 
 echo "Following directories were created..."
 find ~/$opname
 
-xfce4-terminal -H -e ./bin/monitor-traffic.sh
+xfce4-terminal -H -e ./bin/monitor-traffic.sh &
