@@ -20,7 +20,7 @@ echo "Following directories were created..."
 find $HOME/$opname
 
 cd $HOME/$opname
-$HOME/$opname/bin/monitor-traffic.shi
+$HOME/$opname/bin/monitor-traffic.sh
 
 xfce4-terminal -x /bin/zsh -c "echo close the window you started in ; /bin/zsh" &
 
