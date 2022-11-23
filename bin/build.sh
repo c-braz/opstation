@@ -15,3 +15,4 @@ echo "Following directories were created..."
 find ~/$opname
 
 xfce4-terminal -H -e ./bin/monitor-traffic.sh &
+xfce4-terminal -H -e cd ~/$opname/logs; vim notes.txt &
