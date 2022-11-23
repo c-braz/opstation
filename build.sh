@@ -5,6 +5,7 @@ echo "Building $opname directories"
 mkdir $HOME/$opname
 mkdir $HOME/$opname/logs
 mkdir $HOME/$opname/tools
+echo 0 > $HOME/$opname/logs/term.count 
 
 cp -R pastables $HOME/$opname/ 
 cp -R bin/ $HOME/$opname/.
