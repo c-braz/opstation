@@ -11,5 +11,7 @@ let termcount=$termcount+1
 echo $termcount > $HOME/$opname/logs/term.count
 mkdir $HOME/$opname/$termcount
 cd $HOME/$opname/$termcount
-xfce4-terminal --title="TERM:$termcount" --geometry=75x15+0+$pos -x script.sh &
+
+xfce4-terminal --title="TERM-$termcount" --geometry=75x15+0+$pos -x script -T$HOME/$opname/logs/TERM-$termcount.$$.time $HOME/$opname/logs/TERM-$termcount.$$.log  &
+
 done
