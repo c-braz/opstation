@@ -16,5 +16,5 @@ echo "export PATH=$PATH:$HOME/$opname/bin" >> /etc/zsh/zshenv
 echo "Following directories were created..."
 find $HOME/$opname
 
-xfce4-terminal --geometry=100x5-0-0 -x /bin/zsh -c "monitor-traffic.sh ; /bin/zsh" &
+$opname/monitor-traffic.sh
 xfce4-terminal --geometry=80x40-0+35 --working-directory=~/remove/logs -x /bin/zsh -c "vim notes.txt ; /bin/zsh" &
