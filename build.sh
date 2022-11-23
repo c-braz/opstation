@@ -6,7 +6,9 @@ mkdir $HOME/$opname
 mkdir $HOME/$opname/logs
 mkdir $HOME/$opname/tools
 
+cp -R pastables $HOME/$opname/ 
 cp -R bin/ ~/$opname/.
+cp etc/.vimrc $HOME/.vimrc
 cp etc/terminalrc $HOME/.config/xfce4/terminal/.
 
 echo "export opname=$opname" >> $HOME/.zshrc
