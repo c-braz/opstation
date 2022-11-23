@@ -2,17 +2,19 @@
 read -p "OP_Name: " opname
 echo "Building $opname directories"
 
-mkdir ~/$opname
-mkdir ~/$opname/logs
-mkdir ~/$opname/tools
+mkdir $HOME/$opname
+mkdir $HOME/$opname/logs
+mkdir $HOME/$opname/tools
 
 cp -R bin/ ~/$opname/.
-cp etc/terminalrc ~/.config/xfce4/terminal/.
+cp etc/terminalrc $HOME/.config/xfce4/terminal/.
 
 chown -R kali:kali ~/$opname
 
-echo "Following directories were created..."
-find ~/$opname
+echo "export PATH=$PATH:$HOME/$opname/bin" >> $HOME/.zshrc
 
-xfce4-terminal -H -e ./bin/monitor-traffic.sh &
-xfce4-terminal -H -e cd ~/$opname/logs; vim notes.txt &
+echo "Following directories were created..."
+find $HOME/$opname
+
+xfce4-terminal -x /bin/zsh -c "monitor-traffic.sh ; /bin/zsh" &
+xfce4-terminal --working-directory=~/remove/logs -x /bin/zsh -c "vim notes.txt ; /bin/zsh" &
