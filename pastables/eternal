@@ -1,0 +1,7 @@
+Eternal
+----------
+use auxiliary/scanner/smb/smb_ms17_010
+set CHECK_pipe true
+set RHOSTS [TGT]
+
+++++++++++  

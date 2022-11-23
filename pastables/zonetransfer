@@ -1,0 +1,8 @@
+Zone Transfer
+----------
+nslookup
+server [name-server]
+set type=any
+ls -d *
+
+++++++++++

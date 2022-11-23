@@ -1,0 +1,5 @@
+goBuster
+----------
+gobuster dir -u http://[IP]:[PORT] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+
+++++++++++  
