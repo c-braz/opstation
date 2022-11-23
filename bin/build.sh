@@ -9,6 +9,8 @@ mkdir ~/$opname/tools
 cp -R bin/ ~/$opname/.
 cp etc/terminalrc ~/.config/xfce4/terminal/.
 
+chown -R kali:kali ~/$opname
+
 echo "Following directories were created..."
 find ~/$opname
 
