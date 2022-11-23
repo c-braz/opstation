@@ -22,3 +22,5 @@ find $HOME/$opname
 cd $HOME/$opname
 $HOME/$opname/bin/monitor-traffic.sh
 xfce4-terminal --geometry=80x40-0+35 -x /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
+
+xfce4-terminal -x /bin/zsh -c "echo close the window you started in ; /bin/zsh" &
