@@ -1,2 +1,2 @@
 #!/bin/bash
-xfce4-terminal --title="ssh monitor" --geometry=80x10-500-0 -x /bin/zsh -c "tail -F $HOME/$opname/logs/ssh.log | GREP_COLOR=\"49;91;1\" egrep -i --color=always 'Connection refused|Killed|failed|$'" &
+xfce4-terminal --title="ssh monitor" --geometry=80x10-500-0 -x /bin/zsh -c "tail -F $HOME/$opname/logs/ssh.log | sed --unbuffered -e 's/\(.*Requesting forwarding of remote forward LOCALHOST.*\|Connection refused\|remote port forwarding failed\|Address already in use\)/\o033[1;91m\1\o033[0;39m/' -e 's/\(.*client_request_forwarded.*\)/\o033[1m\1\o033[0;39m/'  -e 's/\(.*GatewayPorts.*\)/\o033[1;32m\1\o033[0;39m/' -e 's/\(\([0-9]\{1,3\}[\.]\)\{3\}[0-9]\{1,3\}\)/\o033[1;36m\1\o033[0;39m/'" &
