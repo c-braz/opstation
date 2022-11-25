@@ -12,8 +12,10 @@ echo 0 > $HOME/$opname/logs/term.count
 #copying files and configs
 cp -R pastables $HOME/$opname/ 
 cp -R bin/ $HOME/$opname/.
-cp etc/.vimrc $HOME/.vimrc
-cp etc/terminalrc $HOME/.config/xfce4/terminal/.
+cp -R etc/.* $HOME/
+
+#reload xfce4 configs 
+xfce4-panel -r
 
 #setting up ENV
 chmod +x $HOME/$opname/bin/*
