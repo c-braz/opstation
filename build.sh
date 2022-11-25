@@ -5,16 +5,21 @@ echo "Building $opname directories"
 mkdir $HOME/$opname
 mkdir $HOME/$opname/logs
 mkdir $HOME/$opname/tools
+
+#Start count number of terminals started with terminal.sh 
 echo 0 > $HOME/$opname/logs/term.count 
 
+#copying files and configs
 cp -R pastables $HOME/$opname/ 
 cp -R bin/ $HOME/$opname/.
 cp etc/.vimrc $HOME/.vimrc
 cp etc/terminalrc $HOME/.config/xfce4/terminal/.
 
+#setting up ENV
 chmod +x $HOME/$opname/bin/*
 echo "export opname=$opname" >> $HOME/.zshrc
 echo "export PATH=$PATH:$HOME/$opname/bin" >> $HOME/.zshrc
+echo "export PROMPT='%F{blue}%B%n@%m%b%f(%~)%*~$ '" >> $HOME/.zshrc
 
 echo "Following directories were created..."
 find $HOME/$opname
