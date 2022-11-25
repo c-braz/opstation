@@ -20,6 +20,7 @@ chmod +x $HOME/$opname/bin/*
 echo "export opname=$opname" >> $HOME/.zshrc
 echo "export PATH=$PATH:$HOME/$opname/bin" >> $HOME/.zshrc
 echo "export PROMPT='%F{blue}%B%n@%m%b%f(%~)%*~$ '" >> $HOME/.zshrc
+echo "alias ssh='ssh -E $HOME/$opname/logs/ssh.log'"
 
 echo "Following directories were created..."
 find $HOME/$opname

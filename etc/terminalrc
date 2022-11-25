@@ -33,4 +33,4 @@ FontName=Monospace 8
 ColorForeground=#c0c0bfbfbcbc
 ColorBoldIsBright=FALSE
 TitleMode=TERMINAL_TITLE_REPLACE
-FontAllowBold=FALSE
+FontAllowBold=TRUE
