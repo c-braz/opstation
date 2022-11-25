@@ -29,6 +29,8 @@ find $HOME/$opname
 
 cd $HOME/$opname
 $HOME/$opname/bin/monitor-traffic.sh
+$HOME/$opname/bin/monitor-ssh.sh
+
 
 xfce4-terminal -x /bin/zsh -c "echo close the window you started in ; /bin/zsh" &
 
