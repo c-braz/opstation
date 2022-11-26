@@ -15,7 +15,7 @@ cp -R bin/ $HOME/$opname/.
 cp -R etc/.* $HOME/
 
 #reload xfce4 configs 
-xfce4-panel -r
+touch $HOME/.config/xfce4/terminal/terminalrc 
 
 #setting up ENV
 chmod +x $HOME/$opname/bin/*
@@ -36,3 +36,5 @@ xfce4-terminal -x /bin/zsh -c "echo close the window you started in ; /bin/zsh" 
 
 cd $HOME/$opname/pastables
 xfce4-terminal --title=NOTES --geometry=80x40-0+35 -x /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
+
+
