@@ -32,7 +32,11 @@ $HOME/$opname/bin/monitor-traffic.sh
 $HOME/$opname/bin/monitor-ssh.sh
 
 
-xfce4-terminal -x /bin/zsh -c "echo close the window you started in ; /bin/zsh" &
+xfce4-terminal -x /bin/zsh -c "echo '\033[1;31m
+###############################
+close the window you started in 
+###############################
+'; /bin/zsh" &
 
 cd $HOME/$opname/pastables
 xfce4-terminal --title=NOTES --geometry=80x40-0+35 -x /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
