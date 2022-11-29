@@ -34,3 +34,4 @@ ColorForeground=#c0c0bfbfbcbc
 ColorBoldIsBright=FALSE
 TitleMode=TERMINAL_TITLE_REPLACE
 FontAllowBold=TRUE
+ScrollingUnlimited=TRUE
