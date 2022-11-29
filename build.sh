@@ -28,8 +28,8 @@ echo "Following directories were created..."
 find $HOME/$opname
 
 cd $HOME/$opname
-$HOME/$opname/bin/monitor-traffic.sh
-$HOME/$opname/bin/monitor-ssh.sh
+xfce4-terminal --title="traffic monitor" --geometry=80x10-0-0 -x /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh"
+xfce4-terminal --title="ssh monitor" --geometry=80x10-500-0 -x /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh"
 
 
 xfce4-terminal -x /bin/zsh -c "echo '\033[1;31m
