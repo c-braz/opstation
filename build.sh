@@ -31,8 +31,8 @@ echo "Following directories were created..."
 find $HOME/$opname
 
 cd $HOME/$opname
-xterm -geometry 70x10-0-0 -e /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh" &
-xterm -geometry 70x10+450-0  -e /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh" &
+xterm -T "TRAFFIC MONITOR" -geometry 70x10-0-0 -e /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh" &
+xterm -T "SSH MONITOR" -geometry 70x10+450-0  -e /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh" &
 
 
 xterm -geometry 55x20+572+35 -e /bin/zsh -c "echo '\033[1;31m
@@ -42,6 +42,6 @@ close the window you started in
 '; /bin/zsh" &
 
 cd $HOME/$opname/pastables
-xterm -tn NOTES -geometry 80x40-0+35 -e /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
+xterm -T "NOTES" -geometry 70x35-0+35 -e /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
 
 
