@@ -31,11 +31,11 @@ echo "Following directories were created..."
 find $HOME/$opname
 
 cd $HOME/$opname
-xterm -tn "traffic monitor" -geometry 80x10-0-0 -e /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh" &
-xterm -tn "ssh monitor" -geometry 80x10-500-0  -e /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh" &
+xterm -geometry 70x10-0-0 -e /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh" &
+xterm -geometry 70x10+450-0  -e /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh" &
 
 
-xterm -e /bin/zsh -c "echo '\033[1;31m
+xterm -geometry 55x20+572+35 -e /bin/zsh -c "echo '\033[1;31m
 ###############################
 close the window you started in 
 ###############################
