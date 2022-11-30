@@ -15,8 +15,11 @@ cp -R bin/ $HOME/$opname/.
 cp -R etc/.* $HOME/
 
 #reload xfce4 configs 
-touch $HOME/.config/xfce4/terminal/terminalrc 
+#touch $HOME/.config/xfce4/terminal/terminalrc 
 
+# Load xterm config 
+xrdb -load ~/.Xresources
+ 
 #setting up ENV
 chmod +x $HOME/$opname/bin/*
 echo "export opname=$opname" >> $HOME/.zshrc
@@ -28,17 +31,17 @@ echo "Following directories were created..."
 find $HOME/$opname
 
 cd $HOME/$opname
-xfce4-terminal --title="traffic monitor" --geometry=80x10-0-0 -x /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh" &
-xfce4-terminal --title="ssh monitor" --geometry=80x10-500-0 -x /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh" &
+xterm -tn "traffic monitor" -geometry 80x10-0-0 -e /bin/zsh -c "$HOME/$opname/bin/monitor-traffic.sh; /bin/zsh" &
+xterm -tn "ssh monitor" -geometry 80x10-500-0  -e /bin/zsh -c "$HOME/$opname/bin/monitor-ssh.sh; /bin/zsh" &
 
 
-xfce4-terminal -x /bin/zsh -c "echo '\033[1;31m
+xterm -e /bin/zsh -c "echo '\033[1;31m
 ###############################
 close the window you started in 
 ###############################
 '; /bin/zsh" &
 
 cd $HOME/$opname/pastables
-xfce4-terminal --title=NOTES --geometry=80x40-0+35 -x /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
+xterm -tn NOTES -geometry 80x40-0+35 -e /bin/zsh -c "vim $HOME/$opname/logs/notes.txt ; /bin/zsh" &
 
 
